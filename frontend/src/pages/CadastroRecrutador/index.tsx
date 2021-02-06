@@ -12,40 +12,23 @@ const Landing: React.FC = () => (
 
     <main>
       <h2>
-        Essa plataforma foi criada com o intuito de você poder se desenvolver
-        amigue!
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi harum
+        modi expedita ipsam hic explicabo!
       </h2>
-      <p>
-        Trabalhe em equipe, receba briefings, mostre o quão incrível você é!
-      </p>
+      <p>Necessitatibus animi veniam labore soluta sint corporis temporibus.</p>
 
       <form>
         <FieldSingle>
-          <h4>Como você se chama?</h4>
+          <h4>Qual seu nome?</h4>
           <input type="text" />
         </FieldSingle>
 
-        <FieldDouble>
-          <div>
-            <h4>Qual a sua área:</h4>
-            <select>
-              <option value="Dados">Dados</option>
-              <option value="Back-End">Back-End</option>
-              <option value="Front-End">Front-End</option>
-              <option value="Full-Stack">Full-Stack</option>
-              <option value="Dados">Dados</option>
-              <option value="UI">UI</option>
-              <option value="UX">UX</option>
-            </select>
-          </div>
+        <FieldSingle>
+          <h4>Nome da Empresa:</h4>
+          <input type="text" />
+        </FieldSingle>
 
-          <div>
-            <h4>Linkedin (URL):</h4>
-            <input type="text" />
-          </div>
-        </FieldDouble>
-
-        <h4>De onde você é?</h4>
+        <h4>Onde estão localizados?</h4>
         <hr />
 
         <FieldDouble>
@@ -83,7 +66,7 @@ const Landing: React.FC = () => (
           </div>
 
           <div>
-            <h4>Sua cidade:</h4>
+            <h4>Digite a cidade:</h4>
             <input type="text" />
           </div>
         </FieldDouble>
@@ -92,7 +75,7 @@ const Landing: React.FC = () => (
         <hr />
 
         <FieldSingle>
-          <h4>Seu melhor e-mail:</h4>
+          <h4>E-mail corporativo:</h4>
           <input type="email" />
         </FieldSingle>
 
