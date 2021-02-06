@@ -10,27 +10,20 @@ export default createGlobalStyle`
 
   body {
     background: #e5e5e5;
-    color: #489fb5;
+    /* color: #489fb5; */
+    color: #333333;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
-  body, input, button {
+  body, input, select, button {
     font-family: 'Encode Sans', sans-serif;
     font-size: 18px;
     font-weight: 400;
   }
 
-  h1, h2, h3 {
-    font-weight: 700;
-
-    &.semibold {
-      font-weight: 600;
-    }
-
-    &.regular {
-      font-weight: 400;
-    }
+  h1, h2, h3, h4 {
+    font-weight: 600;
   }
 
   h1 {
@@ -45,7 +38,12 @@ export default createGlobalStyle`
     font-size: 27px;
   }
 
+  h4 {
+    font-size: 18px;
+  }
+
   button {
     cursor: pointer;
+    border: none;
   }
 `;
