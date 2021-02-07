@@ -28,9 +28,6 @@ const Landing: React.FC = () => (
           <input type="text" />
         </FieldSingle>
 
-        <h4>Onde estão localizados?</h4>
-        <hr />
-
         <FieldDouble>
           <div>
             <h4>Estado (UF)</h4>
@@ -74,9 +71,6 @@ const Landing: React.FC = () => (
           </div>
         </FieldDouble>
 
-        <h4>Seu Login</h4>
-        <hr />
-
         <FieldSingle>
           <h4>E-mail corporativo</h4>
           <input type="email" />
@@ -97,7 +91,8 @@ const Landing: React.FC = () => (
         <FieldSingle>
           <label htmlFor="termos">
             <input type="checkbox" name="termos" id="termos" />
-            Ao se cadastrar, você aceita nossos Termos de Uso.
+            Ao se cadastrar, você aceita nossos&nbsp;
+            <Link to="/termos-de-uso">Termos de Uso</Link>
           </label>
         </FieldSingle>
 

@@ -26,16 +26,10 @@ export const Container = styled.div`
       padding-left: 10px;
     }
 
-    hr {
-      margin-top: 10px;
-      margin-bottom: 20px;
-      border: #4f4f4f solid 1px;
-    }
-
     input:not([type='checkbox']),
     select {
       width: 100%;
-      border: #397d8f solid 3px;
+      border: #d99230 solid 3px;
       border-radius: 20px;
       margin-top: 10px;
       padding: 10px 20px 12px;
@@ -44,6 +38,15 @@ export const Container = styled.div`
     label {
       display: flex;
       align-items: center;
+
+      a {
+        color: #489fb5;
+        text-decoration: underline;
+
+        &:hover {
+          color: #397d8f;
+        }
+      }
     }
 
     input[type='checkbox'] {
@@ -55,17 +58,17 @@ export const Container = styled.div`
     }
 
     button {
-      background: #397d8f;
+      background: #ffa62b;
       width: 100%;
       height: 60px;
       border-radius: 20px;
       font-size: 20px;
       font-weight: 700;
-      color: #fbf9f8;
+      color: #333333;
       text-transform: uppercase;
 
       &:hover {
-        background: #489fb5;
+        background: #d99230;
       }
     }
   }

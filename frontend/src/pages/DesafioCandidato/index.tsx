@@ -113,7 +113,7 @@ const DesafioCandidato: React.FC = () => {
           </ul>
         </div>
 
-        <div>
+        <div className="labelContainer">
           <label htmlFor="processoSeletivo">
             <input
               type="checkbox"

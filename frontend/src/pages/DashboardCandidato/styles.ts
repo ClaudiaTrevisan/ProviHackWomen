@@ -25,18 +25,20 @@ export const Container = styled.div`
   }
 
   button.more {
-    background: #489fb5;
+    background: #ffa62b;
     border-radius: 10px;
     min-width: 210px;
     display: block;
     margin-bottom: 35px;
     margin-left: auto;
     margin-right: auto;
-    color: #fbf9f8;
-    line-height: 40px;
+    font-weight: 600;
+    color: #333333;
+    line-height: 50px;
+    text-transform: uppercase;
 
     &:hover {
-      background: #397d8f;
+      background: #d99230;
     }
   }
 `;

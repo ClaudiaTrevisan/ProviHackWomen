@@ -15,7 +15,7 @@ export const Container = styled.div`
 
   h2 {
     padding-bottom: 30px;
-    color: #d99230;
+    color: #397d8f;
   }
 
   form {
@@ -44,6 +44,15 @@ export const Container = styled.div`
     label {
       display: flex;
       align-items: center;
+
+      a {
+        color: #489fb5;
+        text-decoration: underline;
+
+        &:hover {
+          color: #397d8f;
+        }
+      }
     }
 
     input[type='checkbox'] {
@@ -55,17 +64,17 @@ export const Container = styled.div`
     }
 
     button {
-      background: #d99230;
+      background: #ffa62b;
       width: 100%;
       height: 60px;
       border-radius: 20px;
       font-size: 20px;
       font-weight: 700;
-      color: #fbf9f8;
+      color: #333333;
       text-transform: uppercase;
 
       &:hover {
-        background: #ffa62b;
+        background: #d99230;
       }
     }
   }

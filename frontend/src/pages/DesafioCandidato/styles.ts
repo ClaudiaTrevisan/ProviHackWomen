@@ -37,12 +37,14 @@ export const Container = styled.div`
       margin-top: 18px;
     }
 
+    .labelContainer {
+      margin-top: 40px;
+      margin-bottom: 40px;
+      text-align: right;
+    }
+
     label {
-      padding-top: 40px;
-      padding-bottom: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
+      display: inline-flex;
     }
 
     input[type='checkbox'] {
@@ -75,17 +77,17 @@ export const Container = styled.div`
         }
 
         button {
-          background: #397d8f;
+          background: #ffa62b;
           width: 275px;
           height: 60px;
           border-radius: 20px;
           font-size: 16px;
           font-weight: 600;
-          color: #fbf9f8;
+          color: #333333;
           text-transform: uppercase;
 
           &:hover {
-            background: #489fb5;
+            background: #d99230;
           }
         }
       }
