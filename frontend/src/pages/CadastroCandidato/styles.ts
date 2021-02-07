@@ -9,7 +9,7 @@ export const Container = styled.div`
   background-attachment: fixed;
 
   main {
-    max-width: 870px;
+    max-width: 750px;
   }
 
   h2 {
@@ -47,7 +47,7 @@ export const Container = styled.div`
     }
 
     button {
-      background: #489fb5;
+      background: #397d8f;
       width: 100%;
       height: 60px;
       border-radius: 20px;
@@ -57,7 +57,7 @@ export const Container = styled.div`
       text-transform: uppercase;
 
       &:hover {
-        background: #397d8f;
+        background: #489fb5;
       }
     }
   }

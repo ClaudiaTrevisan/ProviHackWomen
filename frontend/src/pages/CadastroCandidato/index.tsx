@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import { Container, FieldSingle, FieldDouble } from './styles';
 
@@ -11,12 +12,9 @@ const Landing: React.FC = () => (
 
     <main>
       <h2>
-        Essa plataforma foi criada com o intuito de você poder se desenvolver
-        amigue!
+        Essa plataforma foi criada para te ajudar a se desenvolver, amigue!
       </h2>
-      <p>
-        Trabalhe em equipe, receba briefings, mostre o quão incrível você é!
-      </p>
+      <p>Trabalhe em equipe, resolva desafios e mostre todo o seu potencial!</p>
 
       <form>
         <FieldSingle>
@@ -31,7 +29,7 @@ const Landing: React.FC = () => (
               <option value="" disabled selected>
                 Selecionar...
               </option>
-              <option value="Dados">Dados</option>
+              <option value="Dados">Dad os</option>
               <option value="Back-End">Back-End</option>
               <option value="Front-End">Front-End</option>
               <option value="Full-Stack">Full-Stack</option>
@@ -108,7 +106,7 @@ const Landing: React.FC = () => (
           </div>
 
           <div>
-            <h4>Confirme a senha</h4>
+            <h4>Confirme sua senha</h4>
             <input type="password" />
           </div>
         </FieldDouble>
@@ -116,11 +114,13 @@ const Landing: React.FC = () => (
         <FieldSingle>
           <label htmlFor="termos">
             <input type="checkbox" name="termos" id="termos" />
-            Aceito os Termos de Uso
+            Ao se cadastrar, você aceita nossos Termos de Uso.
           </label>
         </FieldSingle>
 
-        <button type="submit">Vamos lá!</button>
+        <Link to="/perfil-candidato">
+          <button type="button">Vamos lá!</button>
+        </Link>
       </form>
     </main>
 
