@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import companyBusiness, { CompanyBusiness } from "../business/CompanyBusiness";
-import { Basedatabase } from "../data/basedatabase";
+import { Basedatabase } from "../data/Basedatabase";
 import { InputCompany, InputProject } from "../model/Company";
 import { validation } from "../utils/validation";
 

@@ -1,5 +1,5 @@
 import { CandidateIn, ProjectCandidate } from "../model/Candidate";
-import { Basedatabase } from "./basedatabase";
+import { Basedatabase } from "./Basedatabase";
 import Migrations from "./Migrations";
 
 export class CandidateDatabase extends Basedatabase {

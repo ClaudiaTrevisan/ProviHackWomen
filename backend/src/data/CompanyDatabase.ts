@@ -1,5 +1,5 @@
 import { CompanyIn, Project } from "../model/Company";
-import { Basedatabase } from "./basedatabase";
+import { Basedatabase } from "./Basedatabase";
 import Migrations from "./Migrations";
 
 export class CompanyDatabase extends Basedatabase {

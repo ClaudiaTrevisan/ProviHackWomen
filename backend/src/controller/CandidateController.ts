@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import candidateBusiness, { CandidateBusiness } from "../business/CandidateBusiness";
-import { Basedatabase } from "../data/basedatabase";
+import { Basedatabase } from "../data/Basedatabase";
 import { InputCandidate } from "../model/Candidate";
 import { validation } from "../utils/validation";
 

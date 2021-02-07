@@ -1,4 +1,4 @@
-import { Basedatabase } from "./basedatabase";
+import { Basedatabase } from "./Basedatabase";
 
 class Migrations extends Basedatabase {
   private static tableCandidate: string = "candidate";
