@@ -14,6 +14,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CompanyController = void 0;
 const CompanyBusiness_1 = __importDefault(require("../business/CompanyBusiness"));
+const basedatabase_1 = require("../data/basedatabase");
 const validation_1 = require("../utils/validation");
 class CompanyController {
     constructor(companyBusiness) {
@@ -30,6 +31,35 @@ class CompanyController {
                 };
                 const token = yield this.companyBusiness.signupCompany(input, validation_1.validation);
                 res.status(200).send({ token });
+            }
+            catch (error) {
+                res.status(400).send({ error: error.message });
+            }
+            yield basedatabase_1.Basedatabase.destroyConnection();
+        });
+        this.insertProjectCompany = (req, res) => __awaiter(this, void 0, void 0, function* () {
+            try {
+                const token = req.headers.authorization;
+                const input = {
+                    title: req.body.title,
+                    area: req.body.area,
+                    time: req.body.time,
+                    criteria: req.body.criteria,
+                    description: req.body.description
+                };
+                yield this.companyBusiness.insertProjectCompany(token, input, validation_1.validation);
+                res.status(200).send("Project has inserted");
+            }
+            catch (error) {
+                res.status(400).send({ error: error.message });
+            }
+            yield basedatabase_1.Basedatabase.destroyConnection();
+        });
+        this.getProjects = (req, res) => __awaiter(this, void 0, void 0, function* () {
+            try {
+                const token = req.headers.authorization;
+                const result = yield this.companyBusiness.getProjects(token);
+                res.status(200).send(result);
             }
             catch (error) {
                 res.status(400).send({ error: error.message });

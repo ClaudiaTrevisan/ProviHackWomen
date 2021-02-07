@@ -13,41 +13,59 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CandidateBusiness = void 0;
-const candidate_1 = __importDefault(require("../model/candidate"));
+const Candidate_1 = require("../model/Candidate");
 const HashManager_1 = __importDefault(require("../service/HashManager"));
 const Authenticator_1 = __importDefault(require("../service/Authenticator"));
+const IdGenerator_1 = __importDefault(require("../service/IdGenerator"));
+const CandidateDatabase_1 = __importDefault(require("../data/CandidateDatabase"));
 class CandidateBusiness {
-    constructor(hashManager, authenticator) {
+    constructor(hashManager, authenticator, idGenerator, candidateDatabase) {
         this.hashManager = hashManager;
         this.authenticator = authenticator;
+        this.idGenerator = idGenerator;
+        this.candidateDatabase = candidateDatabase;
         this.signupCandidate = (input, validator) => __awaiter(this, void 0, void 0, function* () {
             try {
                 const resultValidation = validator(input);
                 if (!resultValidation.isValid) {
                     throw new Error("Missing properties");
                 }
+                ;
                 if (input.email.indexOf("@") === -1) {
                     throw new Error("Invalid email");
                 }
-                const name = input.name;
-                const area = input.area;
-                const social = input.social;
-                const uf = input.uf;
-                const city = input.city;
-                const email = input.email;
-                const password = yield this.hashManager.hash(input.password);
-                const userExists = yield candidate_1.default.findOne({ email });
-                if (userExists) {
-                    throw new Error("User already exists");
-                }
-                const newUser = new candidate_1.default({ name, area, social, city, uf, email, password });
-                yield newUser.save();
-                const id = yield candidate_1.default.findOne({ email });
+                ;
+                const hashPassword = yield this.hashManager.hash(input.password);
+                const id = this.idGenerator.generate();
                 const token = this.authenticator.generateToken({
-                    id: id._id,
-                    email: email
+                    id: id,
+                    email: input.email,
+                    name: input.name
                 });
+                yield this.candidateDatabase.signupCandidate(new Candidate_1.CandidateIn(id, input.name, input.area, input.social, input.uf, input.city, input.email, hashPassword));
                 return token;
+            }
+            catch (error) {
+                throw new Error(error.message);
+            }
+        });
+        this.insertProjectCandidate = (id, input, token, validator) => __awaiter(this, void 0, void 0, function* () {
+            try {
+                const resultValidation = validator(input);
+                if (!resultValidation.isValid) {
+                    throw new Error("Missing properties");
+                }
+                ;
+                const tokenData = this.authenticator.getData(token);
+                if (!tokenData.id) {
+                    throw new Error("Token expires");
+                }
+                ;
+                yield this.candidateDatabase.insertProjectCandidate({
+                    id_candidate: id,
+                    id_project: tokenData.id,
+                    project: input
+                });
             }
             catch (error) {
                 throw new Error(error.message);
@@ -56,5 +74,5 @@ class CandidateBusiness {
     }
 }
 exports.CandidateBusiness = CandidateBusiness;
-exports.default = new CandidateBusiness(HashManager_1.default, Authenticator_1.default);
+exports.default = new CandidateBusiness(HashManager_1.default, Authenticator_1.default, IdGenerator_1.default, CandidateDatabase_1.default);
 //# sourceMappingURL=CandidateBusiness.js.map

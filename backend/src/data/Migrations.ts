@@ -46,7 +46,7 @@ class Migrations extends Basedatabase {
         time INT NOT NULL,
         criteria VARCHAR(255) NOT NULL,
         description TEXT NOT NULL,
-        FOREIGN KEY(company_id) REFERENCES ${Migrations.tableCompany}(id)
+        FOREIGN KEY(id_company) REFERENCES ${Migrations.tableCompany}(id)
       )`);
 
       await this.getConnection().raw(`
@@ -58,12 +58,21 @@ class Migrations extends Basedatabase {
         FOREIGN KEY (id_candidate) REFERENCES ${Migrations.tableCandidate}(id),
         FOREIGN KEY (id_project) REFERENCES ${Migrations.tableProjectCompany}(id)
         )`);
-
+      console.log("Terminou")
     } catch (error) {
+      console.log(error)
       throw new Error("Algo deu errado");
       ;
     }
   };
+
+  constructor(){
+    super()
+    console.log("Executando")
+    this.createTables().then(()=>{
+      process.exit()
+    })
+  }
 }
 
 export default new Migrations();
