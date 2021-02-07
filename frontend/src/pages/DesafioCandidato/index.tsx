@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import { Container, Content } from './styles';
 
@@ -98,31 +99,48 @@ const DesafioCandidato: React.FC = () => {
           </div>
 
           <div>
-            <p>Tempo restante</p>
-            <p>8 dias e 12 horas</p>
+            <h4>Tempo restante</h4>
+            <h4>8 dias e 12 horas</h4>
           </div>
         </Content>
 
-        <Content>
-          <div>
-            <h4>Você será avaliado por</h4>
+        <div>
+          <h4>Você será avaliado por</h4>
 
-            <ul>
-              <li>Design System</li>
-              <li>Boas práticas do design</li>
-            </ul>
-          </div>
+          <ul>
+            <li>Design System</li>
+            <li>Boas práticas do design</li>
+          </ul>
+        </div>
+
+        <div>
+          <label htmlFor="processoSeletivo">
+            <input
+              type="checkbox"
+              name="processoSeletivo"
+              id="processoSeletivo"
+            />
+            <strong>Quero participar do processo seletivo</strong>
+          </label>
+        </div>
+
+        <section>
+          <h3>Aceitar desafio?</h3>
+
           <div>
-            <label htmlFor="processoSeletivo">
-              <input
-                type="checkbox"
-                name="processoSeletivo"
-                id="processoSeletivo"
-              />
-              Quero participar do processo seletivo
-            </label>
+            <Link to="/candidato/equipes">
+              <button type="button">Criar um grupo</button>
+            </Link>
+
+            <Link to="/candidato/equipes">
+              <button type="button">Encontrar um grupo</button>
+            </Link>
+
+            <Link to="/candidato/desafio/confirmado">
+              <button type="button">Fazer solo</button>
+            </Link>
           </div>
-        </Content>
+        </section>
       </main>
 
       <Footer />
