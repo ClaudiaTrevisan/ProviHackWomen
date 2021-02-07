@@ -5,6 +5,7 @@ import Landing from '../pages/Landing';
 import CadastroCandidato from '../pages/CadastroCandidato';
 import CadastroRecrutador from '../pages/CadastroRecrutador';
 import Challenge from '../pages/DesafioSelecionadoCandidato';
+import DashboardCandidato from '../pages/DashboardCandidato';
 
 const Routes: React.FC = () => (
   <Switch>
@@ -12,6 +13,7 @@ const Routes: React.FC = () => (
     <Route path="/cadastro-candidato" exact component={CadastroCandidato} />
     <Route path="/cadastro-recrutador" exact component={CadastroRecrutador} />
     <Route path="/desafio-selecionado" exact component={Challenge} />
+    <Route path="/dashboard-candidato" exact component={DashboardCandidato} />
   </Switch>
 );
 
