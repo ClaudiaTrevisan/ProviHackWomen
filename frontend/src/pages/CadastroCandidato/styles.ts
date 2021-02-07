@@ -7,6 +7,7 @@ export const Container = styled.div`
   margin-right: auto;
   background: url(${backgroundImg}) no-repeat right 7% center;
   background-attachment: fixed;
+  background-size: 30%;
 
   main {
     max-width: 750px;
