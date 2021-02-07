@@ -3,6 +3,7 @@ import React from 'react';
 import { Container, FieldSingle, FieldDouble } from './styles';
 
 import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 
 const Landing: React.FC = () => (
   <Container>
@@ -123,13 +124,7 @@ const Landing: React.FC = () => (
       </form>
     </main>
 
-    <footer>
-      Feito por mulheres incríves ❤
-      <br />
-      2021. Todos os direitos reservados.
-      <br />
-      redes sociais
-    </footer>
+    <Footer />
   </Container>
 );
 

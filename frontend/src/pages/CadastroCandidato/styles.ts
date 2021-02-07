@@ -5,7 +5,7 @@ export const Container = styled.div`
   width: 80%;
   margin-left: auto;
   margin-right: auto;
-  background: url(${backgroundImg}) no-repeat right 7% bottom;
+  background: url(${backgroundImg}) no-repeat right 7% center;
   background-attachment: fixed;
 
   main {
