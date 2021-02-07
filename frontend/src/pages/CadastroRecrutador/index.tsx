@@ -101,7 +101,7 @@ const Landing: React.FC = () => (
           </label>
         </FieldSingle>
 
-        <Link to="/perfil-recrutador">
+        <Link to="/recrutador/perfil">
           <button type="button">Vamos lá!</button>
         </Link>
       </form>

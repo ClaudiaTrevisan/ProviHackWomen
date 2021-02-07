@@ -41,9 +41,16 @@ export const Container = styled.div`
       padding: 10px 20px 12px;
     }
 
+    label {
+      display: flex;
+      align-items: center;
+    }
+
     input[type='checkbox'] {
+      width: 24px;
+      height: 24px;
       margin-left: 15px;
-      margin-right: 5px;
+      margin-right: 10px;
       font-size: 16px;
     }
 
