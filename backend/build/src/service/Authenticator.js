@@ -35,7 +35,8 @@ class Authenticator {
             const payload = jwt.verify(token, process.env.JWT_KEY);
             const result = {
                 id: payload.id,
-                email: payload.email
+                email: payload.email,
+                name: payload.name
             };
             return result;
         };

@@ -1,41 +1,54 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Company = void 0;
-const mongoose_1 = __importDefault(require("mongoose"));
+exports.Project = exports.CompanyIn = void 0;
 ;
-class Company {
-    constructor(recruiter, email, name, uf, city, password, projectCompany) {
+;
+class CompanyIn {
+    constructor(id, recruiter, email, name, uf, city, password) {
+        this.id = id;
         this.recruiter = recruiter;
         this.email = email;
         this.name = name;
         this.uf = uf;
         this.city = city;
         this.password = password;
-        this.projectCompany = projectCompany;
+        this.getId = () => this.id;
         this.getRecruiter = () => this.recruiter;
         this.getEmail = () => this.email;
         this.getName = () => this.name;
         this.getUf = () => this.uf;
         this.getCity = () => this.city;
         this.getPassword = () => this.password;
-        this.getProjectCompany = () => this.projectCompany;
     }
 }
-exports.Company = Company;
+exports.CompanyIn = CompanyIn;
+CompanyIn.toCompanyModel = (comp) => {
+    return new CompanyIn(comp.id, comp.recruiter, comp.email, comp.name, comp.uf, comp.city, comp.password);
+};
 ;
-const { Schema } = mongoose_1.default;
-const candidateSchema = new Schema({
-    recruiter: { type: String, require: true },
-    email: { type: String, require: true },
-    name: { type: String, require: true },
-    uf: { type: String, require: true },
-    city: { type: String, require: true },
-    password: { type: String, require: true },
-    projectCompany: { type: String, require: true }
-});
-const CompanyDB = mongoose_1.default.model("company", candidateSchema);
-exports.default = CompanyDB;
-//# sourceMappingURL=company.js.map
+class Project {
+    constructor(id, id_company, name_company, title, area, time, criteria, description) {
+        this.id = id;
+        this.id_company = id_company;
+        this.name_company = name_company;
+        this.title = title;
+        this.area = area;
+        this.time = time;
+        this.criteria = criteria;
+        this.description = description;
+        this.getId = () => this.id;
+        this.getIdCompany = () => this.id_company;
+        this.getNameCompany = () => this.name_company;
+        this.getTitle = () => this.title;
+        this.getArea = () => this.area;
+        this.getTime = () => this.time;
+        this.getCriteria = () => this.criteria;
+        this.getDescription = () => this.description;
+    }
+}
+exports.Project = Project;
+Project.toProjectModel = (comp) => {
+    return new Project(comp.id, comp.id_company, comp.name_company, comp.title, comp.area, comp.time, comp.criteria, comp.description);
+};
+;
+//# sourceMappingURL=Company.js.map

@@ -8,4 +8,5 @@ const express_1 = __importDefault(require("express"));
 const CompanyController_1 = __importDefault(require("../controller/CompanyController"));
 exports.companyRouter = express_1.default.Router();
 exports.companyRouter.post("/signup", CompanyController_1.default.signupCompany);
+exports.companyRouter.post("/project", CompanyController_1.default.insertProjectCompany);
 //# sourceMappingURL=companyRouter.js.map

@@ -12,21 +12,35 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const mongoose_1 = __importDefault(require("mongoose"));
-const connectDB = () => __awaiter(void 0, void 0, void 0, function* () {
-    try {
-        const connect = yield mongoose_1.default.connect(process.env.MONGO_DB, {
-            useUnifiedTopology: true,
-            useNewUrlParser: true,
-            useCreateIndex: true,
-            autoIndex: false,
+exports.Basedatabase = void 0;
+const dotenv_1 = __importDefault(require("dotenv"));
+const knex_1 = __importDefault(require("knex"));
+dotenv_1.default.config();
+class Basedatabase {
+    getConnection() {
+        if (!Basedatabase.connection) {
+            Basedatabase.connection = knex_1.default({
+                client: "mysql",
+                connection: {
+                    host: process.env.DB_HOST,
+                    port: 3306,
+                    user: process.env.DB_USER,
+                    password: process.env.DB_PASSWORD,
+                    database: process.env.DB_DATABASE_NAME
+                }
+            });
+        }
+        return Basedatabase.connection;
+    }
+    static destroyConnection() {
+        return __awaiter(this, void 0, void 0, function* () {
+            if (Basedatabase.connection) {
+                yield Basedatabase.connection.destroy();
+                Basedatabase.connection = null;
+            }
         });
-        console.log(`MongoDB Connected: ${connect.connection.host}`);
     }
-    catch (err) {
-        console.log(err.message);
-        process.exit(1);
-    }
-});
-exports.default = connectDB;
+}
+exports.Basedatabase = Basedatabase;
+Basedatabase.connection = null;
 //# sourceMappingURL=basedatabase.js.map
