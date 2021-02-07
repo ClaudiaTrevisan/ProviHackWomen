@@ -5,6 +5,10 @@ export const Container = styled.div`
   margin-left: auto;
   margin-right: auto;
 
+  main {
+    margin-bottom: -50px;
+  }
+
   h2 {
     font-weight: 700;
     padding-bottom: 30px;

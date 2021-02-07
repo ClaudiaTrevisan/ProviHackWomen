@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.footer`
-  margin-top: 170px;
-  padding-top: 20px;
+  padding-top: 120px;
   padding-bottom: 25px;
   display: flex;
   flex-direction: column;
