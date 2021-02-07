@@ -11,8 +11,8 @@ const Header: React.FC = () => (
       <img src={logoImg} alt="ProviHack Woman" />
     </Link>
     <nav>
-      <Link to="/cadastro-candidato">Para Candidatos</Link>
-      <Link to="/cadastro-recrutador">Para Empresas</Link>
+      <Link to="/candidato/cadastro">Para Candidatos</Link>
+      <Link to="/recrutador/cadastro">Para Empresas</Link>
     </nav>
     <button type="button">Login</button>
   </Container>
