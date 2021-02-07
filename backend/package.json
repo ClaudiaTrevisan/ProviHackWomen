@@ -7,7 +7,7 @@
   "scripts": {
     "test": "jest",
     "dev": "ts-node-dev ./src/index.ts",
-    "start": "tsc && node --inspect ./build/src/index.js",
+    "start": "tsc && node ./build/src/index.js",
     "build": "tsc",
     "migrations": "ts-node-dev ./src/data/Migrations.ts"
   },
