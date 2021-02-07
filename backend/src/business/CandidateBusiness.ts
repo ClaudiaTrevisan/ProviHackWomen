@@ -34,7 +34,8 @@ export class CandidateBusiness {
 
             const token: string = this.authenticator.generateToken({
                 id: id,
-                email: input.email
+                email: input.email,
+                name: input.name
             });
 
             await this.candidateDatabase.signupCandidate(new CandidateIn(
