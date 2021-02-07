@@ -10,7 +10,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const basedatabase_1 = require("./basedatabase");
-class Migrations extends basedatabase_1.Basedatabase {
+class Migrations extends basedatabase_1.basedatabase {
     constructor() {
         super(...arguments);
         this.getTableCandidate = () => Migrations.tableCandidate;

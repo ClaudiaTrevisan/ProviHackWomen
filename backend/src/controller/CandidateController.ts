@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import candidateBusiness, { CandidateBusiness } from "../business/CandidateBusiness";
-import { Basedatabase } from "../data/Basedatabase";
+import { basedatabase } from "../data/basedatabase";
 import { InputCandidate } from "../model/Candidate";
 import { validation } from "../utils/validation";
 
@@ -26,7 +26,7 @@ export class CandidateController {
             res.status(400).send({ error: error.message });
         }
 
-        await Basedatabase.destroyConnection();
+        await basedatabase.destroyConnection();
 
     };
 
@@ -49,7 +49,7 @@ export class CandidateController {
             res.status(400).send({ error: error.message });
         }
 
-        await Basedatabase.destroyConnection();
+        await basedatabase.destroyConnection();
 
     };
 }

@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import companyBusiness, { CompanyBusiness } from "../business/CompanyBusiness";
-import { Basedatabase } from "../data/Basedatabase";
+import { basedatabase } from "../data/basedatabase";
 import { InputCompany, InputProject } from "../model/Company";
 import { validation } from "../utils/validation";
 
@@ -25,7 +25,7 @@ export class CompanyController {
             res.status(400).send({ error: error.message });
         }
 
-        await Basedatabase.destroyConnection();
+        await basedatabase.destroyConnection();
 
     };
 
@@ -48,7 +48,7 @@ export class CompanyController {
             res.status(400).send({ error: error.message });
         }
         
-        await Basedatabase.destroyConnection();
+        await basedatabase.destroyConnection();
     };
 
     public getProjects = async (req: Request, res: Response): Promise<void> =>{

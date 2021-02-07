@@ -16,7 +16,7 @@ exports.CompanyDatabase = void 0;
 const Company_1 = require("../model/Company");
 const basedatabase_1 = require("./basedatabase");
 const Migrations_1 = __importDefault(require("./Migrations"));
-class CompanyDatabase extends basedatabase_1.Basedatabase {
+class CompanyDatabase extends basedatabase_1.basedatabase {
     constructor() {
         super(...arguments);
         this.signupCompany = (input) => __awaiter(this, void 0, void 0, function* () {

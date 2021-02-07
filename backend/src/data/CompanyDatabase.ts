@@ -1,8 +1,8 @@
 import { CompanyIn, Project } from "../model/Company";
-import { Basedatabase } from "./Basedatabase";
+import { basedatabase } from "./basedatabase";
 import Migrations from "./Migrations";
 
-export class CompanyDatabase extends Basedatabase {
+export class CompanyDatabase extends basedatabase {
     public signupCompany = async (
         input: CompanyIn
     ): Promise<void> =>{
