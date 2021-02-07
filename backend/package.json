@@ -2,6 +2,7 @@
   "name": "provi-hack-women",
   "version": "1.0.0",
   "description": "Projeto Full Stack ",
+  "engines": {"node": "12.18.3"},
   "main": "index.js",
   "scripts": {
     "test": "jest",
