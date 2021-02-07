@@ -2,13 +2,11 @@ import React from 'react';
 
 import { Container, FieldSingle, FieldDouble } from './styles';
 
+import Header from '../../components/Header';
+
 const Landing: React.FC = () => (
   <Container>
-    <header>
-      <div>Logo</div>
-      <nav>Para Candidatos Para Empresas</nav>
-      <button type="button">Login</button>
-    </header>
+    <Header />
 
     <main>
       <h2>
