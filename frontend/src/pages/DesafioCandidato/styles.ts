@@ -5,11 +5,31 @@ export const Container = styled.div`
   margin-left: auto;
   margin-right: auto;
 
-  h1 {
-    font-size: 16px;
+  h2 {
+    font-weight: 700;
+    color: #397d8f;
+    padding-bottom: 15px;
   }
 
-  main {
+  p {
+    font-size: 16px;
+    line-height: 24px;
+    padding-bottom: 20px;
+  }
+
+  strong {
+    font-weight: 600;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  input[type='checkbox'] {
+    margin-right: 5px;
+  }
+
+  /* main {
     padding-top: 30px;
 
     .content {
@@ -47,5 +67,7 @@ export const Container = styled.div`
         }
       }
     }
-  }
+  } */
 `;
+
+export const Content = styled.div``;
