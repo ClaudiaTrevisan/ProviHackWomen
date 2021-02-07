@@ -10,10 +10,10 @@ import DashboardCandidato from '../pages/DashboardCandidato';
 const Routes: React.FC = () => (
   <Switch>
     <Route path="/" exact component={Landing} />
-    <Route path="/cadastro-candidato" exact component={CadastroCandidato} />
-    <Route path="/dashboard-candidato" exact component={DashboardCandidato} />
-    <Route path="/desafio" exact component={DesafioCandidato} />
-    <Route path="/cadastro-recrutador" exact component={CadastroRecrutador} />
+    <Route path="/candidato/cadastro" exact component={CadastroCandidato} />
+    <Route path="/candidato/dashboard" exact component={DashboardCandidato} />
+    <Route path="/candidato/desafio" exact component={DesafioCandidato} />
+    <Route path="/recrutador/cadastro" exact component={CadastroRecrutador} />
   </Switch>
 );
 
