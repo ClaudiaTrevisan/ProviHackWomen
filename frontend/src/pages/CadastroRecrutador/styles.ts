@@ -5,8 +5,11 @@ export const Container = styled.div`
   margin-left: auto;
   margin-right: auto;
 
-  h2 {
+  main {
     max-width: 870px;
+  }
+
+  h2 {
     padding-bottom: 30px;
     color: #ffa62b;
   }
@@ -35,14 +38,17 @@ export const Container = styled.div`
     }
 
     button {
-      background: #fcbb62;
+      background: #ffa62b;
       width: 100%;
       height: 60px;
       border-radius: 20px;
-      color: #ffffff;
+      font-size: 20px;
+      font-weight: 700;
+      color: #fbf9f8;
+      text-transform: uppercase;
 
       &:hover {
-        background: #ffa62b;
+        background: #d99230;
       }
     }
   }

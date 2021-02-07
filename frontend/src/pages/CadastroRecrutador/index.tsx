@@ -11,11 +11,11 @@ const Landing: React.FC = () => (
     </header>
 
     <main>
-      <h2>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi harum
-        modi expedita ipsam hic explicabo!
-      </h2>
-      <p>Necessitatibus animi veniam labore soluta sint corporis temporibus.</p>
+      <h2>Você está buscando alguém incrível para integrar o seu time?</h2>
+      <p>
+        Nossa plataforma permite que você encontre alguém com o perfil e
+        competências técnicas para integrar a sua equipe, o match perfeito!
+      </p>
 
       <form>
         <FieldSingle>
@@ -35,6 +35,9 @@ const Landing: React.FC = () => (
           <div>
             <h4>Estado (UF):</h4>
             <select>
+              <option value="" disabled selected>
+                Selecionar...
+              </option>
               <option value="AC">AC</option>
               <option value="AL">AL</option>
               <option value="AP">AP</option>
