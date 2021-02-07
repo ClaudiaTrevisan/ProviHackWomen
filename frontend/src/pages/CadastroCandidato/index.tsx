@@ -27,20 +27,23 @@ const Landing: React.FC = () => (
 
         <FieldDouble>
           <div>
-            <h4>Qual a sua área:</h4>
+            <h4>Qual a sua área</h4>
             <select>
+              <option value="" disabled selected>
+                Selecionar...
+              </option>
               <option value="Dados">Dados</option>
               <option value="Back-End">Back-End</option>
               <option value="Front-End">Front-End</option>
               <option value="Full-Stack">Full-Stack</option>
-              <option value="Dados">Dados</option>
+              <option value="Dados">Produtos</option>
               <option value="UI">UI</option>
               <option value="UX">UX</option>
             </select>
           </div>
 
           <div>
-            <h4>Linkedin (URL):</h4>
+            <h4>Linkedin (URL)</h4>
             <input type="text" />
           </div>
         </FieldDouble>
@@ -50,8 +53,11 @@ const Landing: React.FC = () => (
 
         <FieldDouble>
           <div>
-            <h4>Estado (UF):</h4>
+            <h4>Estado (UF)</h4>
             <select>
+              <option value="" disabled selected>
+                Selecionar...
+              </option>
               <option value="AC">AC</option>
               <option value="AL">AL</option>
               <option value="AP">AP</option>
@@ -83,7 +89,7 @@ const Landing: React.FC = () => (
           </div>
 
           <div>
-            <h4>Sua cidade:</h4>
+            <h4>Sua cidade</h4>
             <input type="text" />
           </div>
         </FieldDouble>
@@ -92,23 +98,30 @@ const Landing: React.FC = () => (
         <hr />
 
         <FieldSingle>
-          <h4>Seu melhor e-mail:</h4>
+          <h4>Seu melhor e-mail</h4>
           <input type="email" />
         </FieldSingle>
 
         <FieldDouble>
           <div>
-            <h4>Senha:</h4>
+            <h4>Senha</h4>
             <input type="password" />
           </div>
 
           <div>
-            <h4>Confirme a senha:</h4>
+            <h4>Confirme a senha</h4>
             <input type="password" />
           </div>
         </FieldDouble>
 
-        <button type="submit">Cadastrar</button>
+        <FieldSingle>
+          <label htmlFor="termos">
+            <input type="checkbox" name="termos" id="termos" />
+            Aceito os Termos de Uso
+          </label>
+        </FieldSingle>
+
+        <button type="submit">Vamos lá!</button>
       </form>
     </main>
 

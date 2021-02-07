@@ -5,14 +5,14 @@ export const Container = styled.div`
   width: 80%;
   margin-left: auto;
   margin-right: auto;
+  background: url(${backgroundImg}) no-repeat right 7% center;
+  background-attachment: fixed;
 
   main {
-    background: url(${backgroundImg}) no-repeat right 7% center;
-    background-attachment: fixed;
+    max-width: 870px;
   }
 
   h2 {
-    max-width: 870px;
     padding-bottom: 30px;
     color: #397d8f;
   }
@@ -31,7 +31,7 @@ export const Container = styled.div`
       border: #4f4f4f solid 1px;
     }
 
-    input,
+    input:not([type='checkbox']),
     select {
       width: 100%;
       border: #397d8f solid 3px;
@@ -40,15 +40,24 @@ export const Container = styled.div`
       padding: 10px 20px 12px;
     }
 
+    input[type='checkbox'] {
+      margin-left: 15px;
+      margin-right: 5px;
+      font-size: 16px;
+    }
+
     button {
-      background: #44c3e3;
+      background: #489fb5;
       width: 100%;
       height: 60px;
       border-radius: 20px;
-      color: #ffffff;
+      font-size: 20px;
+      font-weight: 700;
+      color: #fbf9f8;
+      text-transform: uppercase;
 
       &:hover {
-        background: #489fb5;
+        background: #397d8f;
       }
     }
   }
