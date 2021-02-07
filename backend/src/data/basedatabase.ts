@@ -1,19 +1,33 @@
-import mongoose from "mongoose"
+import dotenv from "dotenv";
+import knex from "knex";
+import Knex from "knex";
 
-const connectDB = async () => {
-  try {
-    const connect = await mongoose.connect(String(process.env.MONGO_DB), {
-      useUnifiedTopology: true,
-      useNewUrlParser: true,
-      useCreateIndex: true,
-      autoIndex: false,
-    })
+dotenv.config();
 
-    console.log(`MongoDB Connected: ${connect.connection.host}`)
-  } catch (err) {
-    console.log(err.message)
-    process.exit(1)
+export abstract class Basedatabase {
+  private static connection: Knex | null = null;
+
+  protected getConnection(): Knex {
+    if (!Basedatabase.connection) {
+      Basedatabase.connection = knex({
+        client: "mysql",
+        connection: {
+          host: process.env.DB_HOST,
+          port: 3306,
+          user: process.env.DB_USER,
+          password: process.env.DB_PASSWORD,
+          database: process.env.DB_DATABASE_NAME
+        }
+      });
+    }
+
+    return Basedatabase.connection;
+  }
+
+  public static async destroyConnection(): Promise<void> {
+    if (Basedatabase.connection) {
+      await Basedatabase.connection.destroy();
+      Basedatabase.connection = null;
+    }
   }
 }
-
-export default connectDB
