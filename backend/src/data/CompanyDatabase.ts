@@ -52,7 +52,7 @@ export class CompanyDatabase extends basedatabase {
           FROM ${Migrations.getTableProjectCompany()};
       `);   
       
-      for(let item of result){
+      for(let item of result[0]){
         projects.push(Project.toProjectModel(item))
       };
 
