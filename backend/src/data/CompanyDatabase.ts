@@ -12,7 +12,8 @@ export class CompanyDatabase extends basedatabase {
           id: input.getId(),
           recruiter: input.getRecruiter(),
           email: input.getEmail(),
-          name: input.getUf(),
+          name: input.getName(),
+          uf: input.getUf(),
           city: input.getCity(),
           password: input.getPassword()
         })
