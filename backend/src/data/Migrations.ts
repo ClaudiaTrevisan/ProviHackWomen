@@ -61,7 +61,7 @@ class Migrations extends Basedatabase {
 
     } catch (error) {
       throw new Error("Algo deu errado");
-      ;
+    
     }
   };
 }
