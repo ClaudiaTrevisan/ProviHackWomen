@@ -76,8 +76,8 @@ export class CandidateBusiness {
             };
             
             await this.candidateDatabase.insertProjectCandidate({
-                id_candidate: id,
-                id_project: tokenData.id,
+                id_candidate: tokenData.id,
+                id_project: id,
                 project: input
             });
 

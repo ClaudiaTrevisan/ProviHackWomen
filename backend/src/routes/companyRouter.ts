@@ -5,3 +5,4 @@ export const companyRouter = express.Router();
 
 companyRouter.post("/signup", CompanyController.signupCompany);
 companyRouter.post("/project", CompanyController.insertProjectCompany);
+companyRouter.get("/project", CompanyController.getProjects);
