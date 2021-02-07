@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import { Container, FieldSingle, FieldDouble } from './styles';
 
@@ -18,12 +19,12 @@ const Landing: React.FC = () => (
 
       <form>
         <FieldSingle>
-          <h4>Qual seu nome?</h4>
+          <h4>Nome do Recrutador</h4>
           <input type="text" />
         </FieldSingle>
 
         <FieldSingle>
-          <h4>Nome da Empresa:</h4>
+          <h4>Nome do Empresa</h4>
           <input type="text" />
         </FieldSingle>
 
@@ -32,7 +33,7 @@ const Landing: React.FC = () => (
 
         <FieldDouble>
           <div>
-            <h4>Estado (UF):</h4>
+            <h4>Estado (UF)</h4>
             <select>
               <option value="" disabled selected>
                 Selecionar...
@@ -68,7 +69,7 @@ const Landing: React.FC = () => (
           </div>
 
           <div>
-            <h4>Digite a cidade:</h4>
+            <h4>Sua cidade</h4>
             <input type="text" />
           </div>
         </FieldDouble>
@@ -77,23 +78,32 @@ const Landing: React.FC = () => (
         <hr />
 
         <FieldSingle>
-          <h4>E-mail corporativo:</h4>
+          <h4>E-mail corporativo</h4>
           <input type="email" />
         </FieldSingle>
 
         <FieldDouble>
           <div>
-            <h4>Senha:</h4>
+            <h4>Senha</h4>
             <input type="password" />
           </div>
 
           <div>
-            <h4>Confirme a senha:</h4>
+            <h4>Confirme sua senha</h4>
             <input type="password" />
           </div>
         </FieldDouble>
 
-        <button type="submit">Cadastrar</button>
+        <FieldSingle>
+          <label htmlFor="termos">
+            <input type="checkbox" name="termos" id="termos" />
+            Ao se cadastrar, você aceita nossos Termos de Uso.
+          </label>
+        </FieldSingle>
+
+        <Link to="/perfil-recrutador">
+          <button type="button">Vamos lá!</button>
+        </Link>
       </form>
     </main>
 

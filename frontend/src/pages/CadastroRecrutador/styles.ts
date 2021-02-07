@@ -1,17 +1,21 @@
 import styled from 'styled-components';
+import backgroundImg from '../../assets/cadastro-recrutador-background.svg';
 
 export const Container = styled.div`
   width: 80%;
   margin-left: auto;
   margin-right: auto;
+  background: url(${backgroundImg}) no-repeat right 7% center;
+  background-attachment: fixed;
+  background-size: 30%;
 
   main {
-    max-width: 870px;
+    max-width: 750px;
   }
 
   h2 {
     padding-bottom: 30px;
-    color: #ffa62b;
+    color: #d99230;
   }
 
   form {
@@ -28,7 +32,7 @@ export const Container = styled.div`
       border: #4f4f4f solid 1px;
     }
 
-    input,
+    input:not([type='checkbox']),
     select {
       width: 100%;
       border: #d99230 solid 3px;
@@ -37,8 +41,14 @@ export const Container = styled.div`
       padding: 10px 20px 12px;
     }
 
+    input[type='checkbox'] {
+      margin-left: 15px;
+      margin-right: 5px;
+      font-size: 16px;
+    }
+
     button {
-      background: #ffa62b;
+      background: #d99230;
       width: 100%;
       height: 60px;
       border-radius: 20px;
@@ -48,7 +58,7 @@ export const Container = styled.div`
       text-transform: uppercase;
 
       &:hover {
-        background: #d99230;
+        background: #ffa62b;
       }
     }
   }
