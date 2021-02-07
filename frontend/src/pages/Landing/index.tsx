@@ -2,13 +2,12 @@ import React from 'react';
 
 import { Container, SectionFull } from './styles';
 
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+
 const Landing: React.FC = () => (
   <Container>
-    <header>
-      <div>Logo</div>
-      <nav>Para Candidatos Para Empresas</nav>
-      <button type="button">Login</button>
-    </header>
+    <Header />
 
     <main>
       <SectionFull>
@@ -22,13 +21,7 @@ const Landing: React.FC = () => (
       </SectionFull>
     </main>
 
-    <footer>
-      Feito por mulheres incríves ❤
-      <br />
-      2021. Todos os direitos reservados.
-      <br />
-      redes sociais
-    </footer>
+    <Footer />
   </Container>
 );
 
