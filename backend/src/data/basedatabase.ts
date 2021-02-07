@@ -22,12 +22,12 @@ export abstract class Basedatabase {
     }
 
     return Basedatabase.connection;
-  }
+  };
 
   public static async destroyConnection(): Promise<void> {
     if (Basedatabase.connection) {
       await Basedatabase.connection.destroy();
       Basedatabase.connection = null;
     }
-  }
+  };
 }
