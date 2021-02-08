@@ -14,7 +14,7 @@ Este site foi construido com ReactJs, Typescript, React-router-dom e Axios e rep
 - Cadastro desafio  
 - Visualização de desafio
 
-Landing page
+Landing page  
 ![image](https://user-images.githubusercontent.com/68132361/107167847-b35b9080-6998-11eb-9352-5d5dd8ec2239.JPG)  
 
 Cadastro empresa  
@@ -32,7 +32,7 @@ Cadastro candidato
 Dashboard Candidato  
 ![image](https://user-images.githubusercontent.com/68132361/107168117-7ba11880-6999-11eb-95d4-4b87635f92ea.JPG)  
 
-Desafio detalhes
+Desafio detalhes  
 ![image](https://user-images.githubusercontent.com/68132361/107168235-d3d81a80-6999-11eb-93d0-6d1818e30947.JPG)  
 
 Perfil Candidato  
