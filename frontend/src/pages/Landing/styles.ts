@@ -35,14 +35,8 @@ export const SectionOne = styled.section`
     line-height: 55px;
     letter-spacing: 0.02em;
     color: #397d8f;
-
-    :nth-of-type(1) {
-      padding-bottom: 48px;
-    }
-
-    :nth-of-type(2) {
-      padding-bottom: 16px;
-    }
+    padding-top: 48px;
+    padding-bottom: 16px;
   }
 
   p {
@@ -56,13 +50,7 @@ export const SectionOne = styled.section`
     }
 
     :nth-of-type(2) {
-      color: #397d8f;
-      font-weight: 600;
-      padding-bottom: 23px;
-    }
-
-    :nth-of-type(3) {
-      padding-bottom: 23px;
+      padding-bottom: 47px;
     }
   }
 `;
