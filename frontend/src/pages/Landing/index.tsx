@@ -33,24 +33,13 @@ const Landing: React.FC = () => (
     <main>
       <SectionOne>
         <div>
-          <h2>#ColabBora!</h2>
           <h2>Ei, você aí... É você mesmo!</h2>
-          <p>
-            Sabe aquela sensação de estar&nbsp;
-            <span className="highlight">iniciando na carreira</span>, ver uma
-            vaga com júnior no título, a descrição falando de 300 skills
-            diferentes e, pra fechar com chave de ouro, exigindo&nbsp;
-            <span className="highlight">experiência</span>&nbsp; de no mínimo X
-            anos na área? Bate o&nbsp;
-            <span className="highlight">desespero</span>, nós sabemos.
-          </p>
-
-          <p>Como você faz então para conseguir essa tão falada experiência?</p>
+          <p>Você é iniciante ou está migrando de área?</p>
           <p>
             Vem com a gente mostrar o seu{' '}
             <span className="highlight">potencial de resolver desafios</span>,
-            com projetos práticos e ainda de maneira colaborativa, pra chegar
-            abalando as estruturas do mercado.
+            aprendendo na prática de maneira colaborativa, para chegar abalando
+            as estruturas do mercado.
           </p>
 
           <div className="center">
