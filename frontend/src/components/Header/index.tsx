@@ -8,7 +8,7 @@ import logoImg from '../../assets/logo.svg';
 const Header: React.FC = () => (
   <Container>
     <Link to="/">
-      <img src={logoImg} alt="ProviHack Woman" />
+      <img src={logoImg} alt="#COLABORA!" />
     </Link>
     <nav>
       <Link to="/candidato/cadastro">Para Candidatos</Link>

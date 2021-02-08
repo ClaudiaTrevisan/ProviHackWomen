@@ -1,7 +1,6 @@
-/* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react';
-
 import { Link } from 'react-router-dom';
+
 import {
   Container,
   SectionOne,
@@ -37,24 +36,26 @@ const Landing: React.FC = () => (
           <h2>Ei, você aí... É você mesmo!</h2>
           <p>
             Sabe aquela sensação de estar&nbsp;
-            <span className="highlight">iniciando na carreira</span>, ver uma
-            vaga com júnior no título, a descrição falando de 300 skills
-            diferentes e, pra fechar com chave de ouro, exigindo&nbsp;
-            <span className="highlight">experiência</span>&nbsp; de no mínimo X
-            anos na área? Bate o&nbsp;
-            <span className="highlight">desespero</span>, nós sabemos.
+            <span className="highlight">iniciando na carreira</span>
+            ,&nbsp; ver uma vaga com júnior no título, a descrição falando de
+            300 skills diferentes e, pra fechar com chave de ouro,
+            exigindo&nbsp;
+            <span className="highlight">experiência</span>
+            &nbsp; de no mínimo X anos na área? Bate o&nbsp;
+            <span className="highlight">desespero</span>
+            ,&nbsp; nós sabemos.
           </p>
 
           <p>Como você faz então para conseguir essa tão falada experiência?</p>
           <p>
-            Vem com a gente mostrar o seu{' '}
-            <span className="highlight">potencial de resolver desafios</span>,
-            com projetos práticos e ainda de maneira colaborativa, pra chegar
-            abalando as estruturas do mercado.
+            Vem com a gente mostrar o seu
+            <span className="highlight">potencial de resolver desafios</span>
+            ,&nbsp;com projetos práticos e ainda de maneira colaborativa, pra
+            chegar abalando as estruturas do mercado.
           </p>
 
           <div className="center">
-            <Link to="/cadastro-candidato">
+            <Link to="/candidato/cadastro">
               <LandingButton type="button">Quero começar!</LandingButton>
             </Link>
           </div>
@@ -75,15 +76,16 @@ const Landing: React.FC = () => (
         <div id="text-two">
           <h2>Encontre alguém incrível para integrar o seu time!</h2>
           <p id="description-one">
-            Já pensou se houvesse uma maneira de{' '}
-            <span className="highlight"> entender o processo técnico</span>{' '}
-            desses profissionais, de uma maneira mais{' '}
-            <span className="highlight">automatizada</span>, simples e, de
-            quebra, contribuindo para a formação de pessoas incríveis? Pois nós
-            pensamos nisso especialmente para você, acredita?
+            Já pensou se houvesse uma maneira de&nbsp;
+            <span className="highlight"> entender o processo técnico</span>
+            &nbsp; desses profissionais, de uma maneira mais
+            <span className="highlight">automatizada</span>
+            ,&nbsp;simples e, de quebra, contribuindo para a formação de pessoas
+            incríveis? Pois nós pensamos nisso especialmente para você,
+            acredita?
           </p>
           <p>
-            Vamos te mostrar que existem{' '}
+            Vamos te mostrar que existem
             <span className="highlight">
               pessoas dispostas a resolver seus desafios
             </span>
@@ -99,7 +101,7 @@ const Landing: React.FC = () => (
           </div>
 
           <div className="center">
-            <Link to="/cadastro-recrutador">
+            <Link to="/recrutador/cadastro">
               <LandingButton type="button">Quero inovar!</LandingButton>
             </Link>
           </div>
