@@ -9,6 +9,7 @@ import DashboardCandidato from '../pages/DashboardCandidato';
 import DesafioCandidato from '../pages/DesafioCandidato';
 import DesafioAceitoCandidato from '../pages/DesafioAceitoCandidato';
 import EquipesCandidato from '../pages/EquipesCandidato';
+import DashboardRecrutador from '../pages/DashboardRecrutador';
 
 import CadastroRecrutador from '../pages/CadastroRecrutador';
 
@@ -28,6 +29,7 @@ const Routes: React.FC = () => (
     <Route path="/candidato/equipes" exact component={EquipesCandidato} />
 
     <Route path="/recrutador/cadastro" exact component={CadastroRecrutador} />
+    <Route path="/recrutador/perfil" exact component={DashboardRecrutador} />
   </Switch>
 );
 
