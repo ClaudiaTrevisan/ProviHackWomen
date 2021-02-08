@@ -32,7 +32,6 @@ const Landing: React.FC = () => (
     <main>
       <SectionOne>
         <div>
-          <h2>#ColabBora!</h2>
           <h2>Ei, você aí... É você mesmo!</h2>
           <p>
             Sabe aquela sensação de estar&nbsp;
@@ -47,6 +46,8 @@ const Landing: React.FC = () => (
           </p>
 
           <p>Como você faz então para conseguir essa tão falada experiência?</p>
+
+          <p>Você é iniciante ou está migrando de área?</p>
           <p>
             Vem com a gente mostrar o seu
             <span className="highlight">potencial de resolver desafios</span>
