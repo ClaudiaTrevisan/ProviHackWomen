@@ -7,6 +7,7 @@ import CadastroCandidato from '../pages/CadastroCandidato';
 import PerfilCandidato from '../pages/PerfilCandidato';
 import DashboardCandidato from '../pages/DashboardCandidato';
 import DesafioCandidato from '../pages/DesafioCandidato';
+import DesafioAceitoCandidato from '../pages/DesafioAceitoCandidato';
 import EquipesCandidato from '../pages/EquipesCandidato';
 
 import CadastroRecrutador from '../pages/CadastroRecrutador';
@@ -19,6 +20,11 @@ const Routes: React.FC = () => (
     <Route path="/candidato/perfil" exact component={PerfilCandidato} />
     <Route path="/candidato/dashboard" exact component={DashboardCandidato} />
     <Route path="/candidato/desafio" exact component={DesafioCandidato} />
+    <Route
+      path="/candidato/desafio/confirmado"
+      exact
+      component={DesafioAceitoCandidato}
+    />
     <Route path="/candidato/equipes" exact component={EquipesCandidato} />
 
     <Route path="/recrutador/cadastro" exact component={CadastroRecrutador} />
