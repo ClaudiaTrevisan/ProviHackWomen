@@ -15,7 +15,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.ProjectDatabase = void 0;
 const basedatabase_1 = require("./basedatabase");
 const Migrations_1 = __importDefault(require("./Migrations"));
-class ProjectDatabase extends basedatabase_1.Basedatabase {
+class ProjectDatabase extends basedatabase_1.basedatabase {
     constructor() {
         super(...arguments);
         this.getProjects = () => __awaiter(this, void 0, void 0, function* () {

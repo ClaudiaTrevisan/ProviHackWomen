@@ -4,12 +4,12 @@ import Knex from "knex";
 
 dotenv.config();
 
-export abstract class Basedatabase {
+export abstract class basedatabase {
   private static connection: Knex | null = null;
 
   protected getConnection(): Knex {
-    if (!Basedatabase.connection) {
-      Basedatabase.connection = knex({
+    if (!basedatabase.connection) {
+      basedatabase.connection = knex({
         client: "mysql",
         connection: {
           host: process.env.DB_HOST,
@@ -21,13 +21,13 @@ export abstract class Basedatabase {
       });
     }
 
-    return Basedatabase.connection;
+    return basedatabase.connection;
   };
 
   public static async destroyConnection(): Promise<void> {
-    if (Basedatabase.connection) {
-      await Basedatabase.connection.destroy();
-      Basedatabase.connection = null;
+    if (basedatabase.connection) {
+      await basedatabase.connection.destroy();
+      basedatabase.connection = null;
     }
   };
 }

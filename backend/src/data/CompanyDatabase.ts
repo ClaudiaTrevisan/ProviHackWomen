@@ -1,8 +1,8 @@
 import { CompanyIn, Project } from "../model/Company";
-import { Basedatabase } from "./Basedatabase";
+import { basedatabase } from "./basedatabase";
 import Migrations from "./Migrations";
 
-export class CompanyDatabase extends Basedatabase {
+export class CompanyDatabase extends basedatabase {
     public signupCompany = async (
         input: CompanyIn
     ): Promise<void> =>{
@@ -12,7 +12,8 @@ export class CompanyDatabase extends Basedatabase {
           id: input.getId(),
           recruiter: input.getRecruiter(),
           email: input.getEmail(),
-          name: input.getUf(),
+          name: input.getName(),
+          uf: input.getUf(),
           city: input.getCity(),
           password: input.getPassword()
         })
@@ -52,7 +53,7 @@ export class CompanyDatabase extends Basedatabase {
           FROM ${Migrations.getTableProjectCompany()};
       `);   
       
-      for(let item of result){
+      for(let item of result[0]){
         projects.push(Project.toProjectModel(item))
       };
 

@@ -12,14 +12,14 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Basedatabase = void 0;
+exports.basedatabase = void 0;
 const dotenv_1 = __importDefault(require("dotenv"));
 const knex_1 = __importDefault(require("knex"));
 dotenv_1.default.config();
-class Basedatabase {
+class basedatabase {
     getConnection() {
-        if (!Basedatabase.connection) {
-            Basedatabase.connection = knex_1.default({
+        if (!basedatabase.connection) {
+            basedatabase.connection = knex_1.default({
                 client: "mysql",
                 connection: {
                     host: process.env.DB_HOST,
@@ -30,17 +30,17 @@ class Basedatabase {
                 }
             });
         }
-        return Basedatabase.connection;
+        return basedatabase.connection;
     }
     static destroyConnection() {
         return __awaiter(this, void 0, void 0, function* () {
-            if (Basedatabase.connection) {
-                yield Basedatabase.connection.destroy();
-                Basedatabase.connection = null;
+            if (basedatabase.connection) {
+                yield basedatabase.connection.destroy();
+                basedatabase.connection = null;
             }
         });
     }
 }
-exports.Basedatabase = Basedatabase;
-Basedatabase.connection = null;
+exports.basedatabase = basedatabase;
+basedatabase.connection = null;
 //# sourceMappingURL=basedatabase.js.map

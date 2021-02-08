@@ -35,7 +35,7 @@ class CompanyController {
             catch (error) {
                 res.status(400).send({ error: error.message });
             }
-            yield basedatabase_1.Basedatabase.destroyConnection();
+            yield basedatabase_1.basedatabase.destroyConnection();
         });
         this.insertProjectCompany = (req, res) => __awaiter(this, void 0, void 0, function* () {
             try {
@@ -53,7 +53,7 @@ class CompanyController {
             catch (error) {
                 res.status(400).send({ error: error.message });
             }
-            yield basedatabase_1.Basedatabase.destroyConnection();
+            yield basedatabase_1.basedatabase.destroyConnection();
         });
         this.getProjects = (req, res) => __awaiter(this, void 0, void 0, function* () {
             try {
