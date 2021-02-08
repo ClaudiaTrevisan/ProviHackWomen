@@ -17,11 +17,6 @@ export const Container = styled.div`
 
   section {
     padding-bottom: 25px;
-
-    &.ornament {
-      border-bottom: #828282 dashed 2px;
-      margin-bottom: 40px;
-    }
   }
 
   button.more {
