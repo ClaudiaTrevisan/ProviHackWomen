@@ -14,6 +14,8 @@ Este site foi construido com ReactJs, Typescript, React-router-dom e Axios e rep
 - Cadastro desafio  
 - Visualização de desafio
 
+--OBS: Telas prontas porem interatividade com bugs.
+
 Landing page  
 ![image](https://user-images.githubusercontent.com/68132361/107167847-b35b9080-6998-11eb-9352-5d5dd8ec2239.JPG)  
 
