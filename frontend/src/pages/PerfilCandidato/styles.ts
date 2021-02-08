@@ -7,6 +7,8 @@ export const Container = styled.div`
 
   main {
     margin-bottom: -50px;
+    display: flex;
+    align-items: flex-start;
   }
 
   h2 {
@@ -14,181 +16,143 @@ export const Container = styled.div`
     padding-bottom: 30px;
     color: #397d8f;
   }
-
-  section {
-    padding-bottom: 25px;
-
-    &.ornament {
-      border-bottom: #828282 dashed 2px;
-      margin-bottom: 40px;
-    }
-  }
-
-  button.more {
-    background: #ffa62b;
-    border-radius: 10px;
-    min-width: 210px;
-    display: block;
-    margin-bottom: 35px;
-    margin-left: auto;
-    margin-right: auto;
-    font-weight: 600;
-    color: #333333;
-    line-height: 50px;
-    text-transform: uppercase;
-
-    &:hover {
-      background: #d99230;
-    }
-  }
 `;
 
-export const CardTeamContainer = styled.div`
-  padding-top: 35px;
-  display: flex;
-  flex-flow: row wrap;
-  gap: 4%;
+export const Perfil = styled.div`
+  width: 40%;
+  max-width: 400px;
+  padding: 35px;
 
-  button {
-    background: #9275c9;
-    border-radius: 32.5px;
-    height: 130px;
-    margin-bottom: 4%;
-    padding-left: 25px;
-    padding-right: 25px;
-    display: flex;
-    flex: 0 0 22%;
-    align-items: center;
-    justify-content: space-between;
-    transform: scale(1);
-    transition: transform 0.2s ease-in-out, background 0.2s ease-in-out;
-
-    &:hover {
-      background: #775fa3;
-      transform: scale(1.05);
-    }
-
-    > img {
-      width: 50px;
-    }
-
-    h4 {
-      font-size: 16px;
-      color: #fbf9f8;
-      text-transform: uppercase;
-    }
-  }
-`;
-
-export const CardHighlightChallengeContainer = styled.div`
-  padding-top: 35px;
-  padding-bottom: 35px;
-  display: flex;
-  flex-flow: row wrap;
-  gap: 4%;
-
-  button {
-    background: #489fb5;
-    border-radius: 30px;
-    min-height: 200px;
-    margin-bottom: 4%;
-    padding: 20px;
-    display: flex;
-    flex: 0 0 22%;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: space-between;
-    transform: scale(1);
-    transition: transform 0.2s ease-in-out, background 0.2s ease-in-out;
-
-    &:hover {
-      background: #397d8f;
-      transform: scale(1.05);
-    }
-
-    > div {
+  div:first-child {
+    img {
       display: flex;
-      align-self: flex-start;
-      align-items: center;
-
-      img {
-        width: 35px;
-      }
-
-      p {
-        font-size: 16px;
-        color: #fbf9f8;
-        padding-left: 10px;
-      }
+      margin-left: auto;
+      margin-right: auto;
     }
 
+    h1 {
+      font-size: 27px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    h2 {
+      padding-bottom: 10px;
+    }
+
+    h1,
+    h2,
     h4 {
-      font-size: 16px;
-      color: #fbf9f8;
-      text-align: left;
-      padding-left: 10px;
+      text-align: center;
     }
+  }
 
-    > img {
-      width: 30px;
-    }
+  > h4 {
+    padding-top: 40px;
+    padding-bottom: 15px;
+  }
+
+  p {
+    font-weight: 600;
+    font-size: 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  h4 + div {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+`;
+
+export const Atividade = styled.div`
+  border-left: #828282 solid 2px;
+  width: 60%;
+  padding: 35px 35px 35px 50px;
+
+  > h4 {
+    padding-bottom: 20px;
+  }
+
+  > p {
+    font-size: 16px;
+    padding-bottom: 20px;
+  }
+
+  p + h2 {
+    padding-top: 40px;
+  }
+`;
+
+export const BarraProgresso = styled.div`
+  background: #f0f0f0;
+  border: #828282 solid 1px;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 400px;
+  height: 10px;
+  margin-bottom: 20px;
+  display: flex;
+
+  &::after {
+    content: '';
+    background: #27ae60;
+    width: 75%;
   }
 `;
 
 export const CardChallengeContainer = styled.div`
-  padding-top: 35px;
-  padding-bottom: 35px;
   display: flex;
   flex-flow: row wrap;
-  gap: 4%;
+  justify-content: space-between;
 
-  button {
-    background: #fbf9f8;
-    border-color: #489fb5;
-    border-style: solid;
-    border-width: 3px;
-    border-radius: 30px;
-    min-height: 200px;
-    margin-bottom: 4%;
-    padding: 20px;
-    display: flex;
-    flex: 0 0 22%;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: space-between;
-    transform: scale(1);
-    transition: transform 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  > div {
+    width: 270px;
+    margin-bottom: 50px;
 
-    &:hover {
-      border-color: #397d8f;
-      transform: scale(1.05);
-    }
+    button {
+      background: #ffffff;
+      border-color: #489fb5;
+      border-style: solid;
+      border-width: 3px;
+      border-radius: 30px;
+      width: 100%;
+      height: 200px;
+      transform: scale(1);
+      transition: transform 0.2s ease-in-out, border-color 0.2s ease-in-out;
 
-    > div {
-      display: flex;
-      align-self: flex-start;
-      align-items: center;
-
-      img {
-        width: 35px;
-      }
-
-      p {
-        font-size: 16px;
-        color: #828282;
-        padding-left: 10px;
+      &:hover {
+        border-color: #397d8f;
+        transform: scale(1.05);
       }
     }
 
     h4 {
-      font-size: 16px;
-      color: #333333;
-      text-align: left;
-      padding-left: 10px;
+      padding-top: 15px;
+      padding-bottom: 10px;
+      padding-left: 15px;
     }
+  }
+`;
 
-    > img {
-      width: 30px;
+export const TagContainer = styled.div`
+  display: flex;
+
+  span {
+    border-radius: 10px;
+    background: #397d8f;
+    font-size: 12px;
+    font-weight: 600;
+    color: #fbf9f8;
+    padding: 7px 10px;
+    margin-left: 15px;
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: scale(0.95);
     }
   }
 `;

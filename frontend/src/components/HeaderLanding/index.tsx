@@ -5,7 +5,7 @@ import { Container } from './styles';
 
 import logoImg from '../../assets/logo.svg';
 
-const Header: React.FC = () => (
+const HeaderLanding: React.FC = () => (
   <Container>
     <Link to="/">
       <img src={logoImg} alt="#COLABORA!" />
@@ -18,4 +18,4 @@ const Header: React.FC = () => (
   </Container>
 );
 
-export default Header;
+export default HeaderLanding;

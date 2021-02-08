@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import {
   Container,
@@ -7,7 +8,7 @@ import {
   CardChallengeContainer,
 } from './styles';
 
-import Header from '../../components/Header';
+import Header from '../../components/HeaderCandidato';
 import Footer from '../../components/Footer';
 
 import teamCardIcon from '../../assets/team-card-icon.svg';
@@ -23,7 +24,7 @@ const DashboardCandidato: React.FC = () => (
     <main>
       <h2>Olá Ellie! :)</h2>
 
-      <section className="ornament">
+      <section>
         <h4>Tem equipe procurando por UI Designer</h4>
 
         <CardTeamContainer>
@@ -49,7 +50,7 @@ const DashboardCandidato: React.FC = () => (
         </CardTeamContainer>
       </section>
 
-      <section className="ornament">
+      <section>
         <h3>Destaques da Semana</h3>
 
         <CardHighlightChallengeContainer>
@@ -59,7 +60,9 @@ const DashboardCandidato: React.FC = () => (
               <p>UI Design</p>
             </div>
             <h4>Como auxiliar os vendendores informais?</h4>
-            <img src={whiteArrowIcon} alt="Acessar desafio completo" />
+            <Link to="/candidato/desafio">
+              <img src={whiteArrowIcon} alt="Acessar desafio completo" />
+            </Link>
           </button>
 
           <button type="button">
@@ -68,7 +71,9 @@ const DashboardCandidato: React.FC = () => (
               <p>UI Design</p>
             </div>
             <h4>Como auxiliar os vendendores informais?</h4>
-            <img src={whiteArrowIcon} alt="Acessar desafio completo" />
+            <Link to="/candidato/desafio">
+              <img src={whiteArrowIcon} alt="Acessar desafio completo" />
+            </Link>
           </button>
 
           <button type="button">
@@ -77,7 +82,9 @@ const DashboardCandidato: React.FC = () => (
               <p>UI Design</p>
             </div>
             <h4>Como auxiliar os vendendores informais?</h4>
-            <img src={whiteArrowIcon} alt="Acessar desafio completo" />
+            <Link to="/candidato/desafio">
+              <img src={whiteArrowIcon} alt="Acessar desafio completo" />
+            </Link>
           </button>
 
           <button type="button">
@@ -86,7 +93,9 @@ const DashboardCandidato: React.FC = () => (
               <p>UI Design</p>
             </div>
             <h4>Como auxiliar os vendendores informais?</h4>
-            <img src={whiteArrowIcon} alt="Acessar desafio completo" />
+            <Link to="/candidato/desafio">
+              <img src={whiteArrowIcon} alt="Acessar desafio completo" />
+            </Link>
           </button>
         </CardHighlightChallengeContainer>
 
@@ -105,7 +114,9 @@ const DashboardCandidato: React.FC = () => (
               <p>UI Design</p>
             </div>
             <h4>Como auxiliar o sistema de aprendizado EAD?</h4>
-            <img src={greenArrowIcon} alt="Acessar desafio completo" />
+            <Link to="/candidato/desafio">
+              <img src={greenArrowIcon} alt="Acessar desafio completo" />
+            </Link>
           </button>
 
           <button type="button">
@@ -114,7 +125,9 @@ const DashboardCandidato: React.FC = () => (
               <p>UI Design</p>
             </div>
             <h4>Como auxiliar o sistema de aprendizado EAD?</h4>
-            <img src={greenArrowIcon} alt="Acessar desafio completo" />
+            <Link to="/candidato/desafio">
+              <img src={greenArrowIcon} alt="Acessar desafio completo" />
+            </Link>
           </button>
 
           <button type="button">
@@ -123,7 +136,9 @@ const DashboardCandidato: React.FC = () => (
               <p>UI Design</p>
             </div>
             <h4>Como auxiliar o sistema de aprendizado EAD?</h4>
-            <img src={greenArrowIcon} alt="Acessar desafio completo" />
+            <Link to="/candidato/desafio">
+              <img src={greenArrowIcon} alt="Acessar desafio completo" />
+            </Link>
           </button>
 
           <button type="button">
@@ -132,7 +147,9 @@ const DashboardCandidato: React.FC = () => (
               <p>UI Design</p>
             </div>
             <h4>Como auxiliar o sistema de aprendizado EAD?</h4>
-            <img src={greenArrowIcon} alt="Acessar desafio completo" />
+            <Link to="/candidato/desafio">
+              <img src={greenArrowIcon} alt="Acessar desafio completo" />
+            </Link>
           </button>
         </CardChallengeContainer>
       </section>
@@ -147,7 +164,9 @@ const DashboardCandidato: React.FC = () => (
               <p>UI Design</p>
             </div>
             <h4>Como auxiliar o sistema de aprendizado EAD?</h4>
-            <img src={greenArrowIcon} alt="Acessar desafio completo" />
+            <Link to="/candidato/desafio">
+              <img src={greenArrowIcon} alt="Acessar desafio completo" />
+            </Link>
           </button>
 
           <button type="button">
@@ -156,7 +175,9 @@ const DashboardCandidato: React.FC = () => (
               <p>UI Design</p>
             </div>
             <h4>Como auxiliar o sistema de aprendizado EAD?</h4>
-            <img src={greenArrowIcon} alt="Acessar desafio completo" />
+            <Link to="/candidato/desafio">
+              <img src={greenArrowIcon} alt="Acessar desafio completo" />
+            </Link>
           </button>
 
           <button type="button">
@@ -165,7 +186,9 @@ const DashboardCandidato: React.FC = () => (
               <p>UI Design</p>
             </div>
             <h4>Como auxiliar o sistema de aprendizado EAD?</h4>
-            <img src={greenArrowIcon} alt="Acessar desafio completo" />
+            <Link to="/candidato/desafio">
+              <img src={greenArrowIcon} alt="Acessar desafio completo" />
+            </Link>
           </button>
 
           <button type="button">
@@ -174,7 +197,9 @@ const DashboardCandidato: React.FC = () => (
               <p>UI Design</p>
             </div>
             <h4>Como auxiliar o sistema de aprendizado EAD?</h4>
-            <img src={greenArrowIcon} alt="Acessar desafio completo" />
+            <Link to="/candidato/desafio">
+              <img src={greenArrowIcon} alt="Acessar desafio completo" />
+            </Link>
           </button>
 
           <button type="button">
@@ -183,7 +208,9 @@ const DashboardCandidato: React.FC = () => (
               <p>UI Design</p>
             </div>
             <h4>Como auxiliar os vendendores informais?</h4>
-            <img src={greenArrowIcon} alt="Acessar desafio completo" />
+            <Link to="/candidato/desafio">
+              <img src={greenArrowIcon} alt="Acessar desafio completo" />
+            </Link>
           </button>
 
           <button type="button">
@@ -192,7 +219,9 @@ const DashboardCandidato: React.FC = () => (
               <p>UI Design</p>
             </div>
             <h4>Como auxiliar os vendendores informais?</h4>
-            <img src={greenArrowIcon} alt="Acessar desafio completo" />
+            <Link to="/candidato/desafio">
+              <img src={greenArrowIcon} alt="Acessar desafio completo" />
+            </Link>
           </button>
 
           <button type="button">
@@ -201,7 +230,9 @@ const DashboardCandidato: React.FC = () => (
               <p>UI Design</p>
             </div>
             <h4>Como auxiliar os vendendores informais?</h4>
-            <img src={greenArrowIcon} alt="Acessar desafio completo" />
+            <Link to="/candidato/desafio">
+              <img src={greenArrowIcon} alt="Acessar desafio completo" />
+            </Link>
           </button>
         </CardChallengeContainer>
 
