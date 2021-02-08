@@ -9,7 +9,7 @@ import {
   TagContainer,
 } from './styles';
 
-import Header from '../../components/Header';
+import Header from '../../components/HeaderCandidato';
 import Footer from '../../components/Footer';
 
 import challengeCompleteCardIcon from '../../assets/trophy-icon.svg';

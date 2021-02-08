@@ -7,7 +7,7 @@ import {
   CardChallengeContainer,
 } from './styles';
 
-import Header from '../../components/Header';
+import Header from '../../components/HeaderCandidato';
 import Footer from '../../components/Footer';
 
 import teamCardIcon from '../../assets/team-card-icon.svg';

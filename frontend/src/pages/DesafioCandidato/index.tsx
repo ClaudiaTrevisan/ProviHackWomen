@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import { Container, Content } from './styles';
 
-import Header from '../../components/Header';
+import Header from '../../components/HeaderCandidato';
 import Footer from '../../components/Footer';
 
 const DesafioCandidato: React.FC = () => {
